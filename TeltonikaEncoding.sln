@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeltonikaEncoding", "TeltonikaEncoding\TeltonikaEncoding.csproj", "{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.Avl", "..\Avl\Teltonika.Avl\Teltonika.Avl.csproj", "{3C69DE22-1513-40A8-930D-2EE926957512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.IO", "..\Io\Teltonika.IO\Teltonika.IO.csproj", "{A6F9766D-28D3-4799-B80A-885946BAD67E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{42D83BA2-559B-44C5-9B00-311EA9A2F928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.Logging", "..\Logging\Teltonika.Logging\Teltonika.Logging.csproj", "{BF283E98-4C77-45BD-9967-6094F4A05C6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C69DE22-1513-40A8-930D-2EE926957512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C69DE22-1513-40A8-930D-2EE926957512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C69DE22-1513-40A8-930D-2EE926957512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C69DE22-1513-40A8-930D-2EE926957512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35EA16F3-353A-4345-ABCB-8634EF6AD3BA}
+	EndGlobalSection
+EndGlobal
