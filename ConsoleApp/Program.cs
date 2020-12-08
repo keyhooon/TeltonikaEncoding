@@ -30,10 +30,10 @@ namespace ConsoleApp
             Console.WriteLine(route.Path);
             route.Path.SRID = 2855;
             Console.WriteLine(route.Path);
-            //var densifier = new NetTopologySuite.Densify.Densifier(route.Path.(2855));
-            //densifier.DistanceTolerance = 0.0001;
+            var densifier = new NetTopologySuite.Densify.Densifier(route.Path);
+            densifier.DistanceTolerance = 0.0001;
             
-            //Console.WriteLine(densifier.GetResultGeometry());
+            Console.WriteLine(densifier.GetResultGeometry());
         }
     }
 }

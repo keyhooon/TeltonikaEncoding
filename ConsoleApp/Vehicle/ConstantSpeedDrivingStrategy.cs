@@ -7,16 +7,22 @@ namespace ConsoleApp
 {
     public class ConstantSpeedDrivingStrategy : DrivingStrategy
     {
-        public ConstantSpeedDrivingStrategy(VehicleManager vehicle) : base(vehicle)
+        private LineString Route;
+        public ConstantSpeedDrivingStrategy(VehicleManager vehicle, double spead) : base(vehicle)
         {
-            Speed = 100;
+            Speed = spead;
+            var densifier = new NetTopologySuite.Densify.Densifier(vehicle.Route.Path);
+            densifier.DistanceTolerance = 0.000001 * spead; ;
+            Route = (LineString)densifier.GetResultGeometry();
         }
         protected override void CalculateLocation(VehicleManager vehicle)
         {
             var oldPos = vehicle.Position;
-
+            var distanceOp = new NetTopologySuite.Operation.Distance.DistanceOp(oldPos.Location,Route);
+            distanceOp.NearestPoints()[1]
+            Route.near
             vehicle.Position = new Model.VehiclePosition(vehicle.Position.Location, Speed, vehicle.Position.Angle);
         }
-        public double Speed { get; set; }
+        public double Speed { get; }
     }
 }
