@@ -9,6 +9,7 @@ namespace ConsoleApp
     {
         public StopDrivingStrategy(VehicleManager vehicle) : base(vehicle)
         {
+
         }
 
         protected override void CalculateLocation(VehicleManager vehicle)

@@ -22,18 +22,18 @@ namespace ConsoleApp
         static Route.RouteContext routeContext = new Route.RouteContext(new DirectionService("5b3ce3597851110001cf6248e88658f607ac495cad9088fe0cd49df3"));
         static void Main(string[] args)
         {
-            var v = new VehicleManager();
-            v.Route = routeContext.GetRoute("");
-            v.Driving = new ConstantSpeedDrivingStrategy(v);
-            v.IsIgnitiate = true;
-            var route = routeContext.GetRoute("");
-            Console.WriteLine(route.Path);
-            route.Path.SRID = 2855;
-            Console.WriteLine(route.Path);
-            var densifier = new NetTopologySuite.Densify.Densifier(route.Path);
-            densifier.DistanceTolerance = 0.0001;
-            
-            Console.WriteLine(densifier.GetResultGeometry());
+            var v = new VehicleManager[] { new VehicleManager(), new VehicleManager() };
+            v[0].Route = routeContext.GetRoute("");
+            v[0].Driving = new ConstantSpeedDrivingStrategy(v[0], 100);
+            v[0].DeviceManager = new DeviceManager(v[0], new Model.Device() { Imei = 0x1122334455667788 });
+            v[0].DeviceManager.RecordingPolicies.AddRecordingPolicies(new TimerRecordingPolicies(TimeSpan.FromSeconds(5)));
+            v[0].IsIgnitiate = true;
+            //v[1].Route = routeContext.GetRoute("");
+            //v[1].Driving = new ConstantSpeedDrivingStrategy(v[1], 100);
+            //v[1].DeviceManager = new DeviceManager(v[1], new Model.Device() { Imei = 0x1122334455667711 });
+            //v[1].DeviceManager.RecordingPolicies.AddRecordingPolicies(new TimerRecordingPolicies(TimeSpan.FromSeconds(5)));
+            //v[1].IsIgnitiate = true;
+            while (true) { };
         }
     }
 }

@@ -20,7 +20,9 @@ namespace ConsoleApp
             {
                 record.Records.Add(avlData);
             }
-            return new DevicePacket(DeviceManager.Device.Imei, record);
+            if (record.Records.Count!= 0)
+                return new DevicePacket(DeviceManager.Device.Imei, record);
+            return null;
         }
     }
 }

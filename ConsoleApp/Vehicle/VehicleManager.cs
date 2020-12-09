@@ -4,6 +4,7 @@ using System;
 using NetTopologySuite.Mathematics;
 using System.Text;
 using System.Threading.Tasks;
+using NLog;
 
 namespace ConsoleApp
 {
@@ -12,14 +13,18 @@ namespace ConsoleApp
         private Model.Route route;
         private bool isIgnitiate;
         private DrivingStrategy driving;
-        private VehiclePosition vehiclePosition;
         private VehiclePosition position;
+        ILogger logger;
 
         public event EventHandler RouteChanged;
         public event EventHandler IsIgnitiateChanged;
         public event EventHandler PositionChanged;
+        public VehicleManager()
+        {
+            logger = LogManager.GetCurrentClassLogger();
 
-        public DeviceManager Device { get; set; }
+        }
+        public DeviceManager DeviceManager { get; set; }
         public bool IsIgnitiate
         {
             get => isIgnitiate;
@@ -34,15 +39,6 @@ namespace ConsoleApp
             }
         }
 
-        public VehiclePosition VehiclePosition
-        {
-            get => vehiclePosition;
-            set
-            {
-                vehiclePosition = value;
-                onPositionChanged();
-            }
-        }
 
 
 
@@ -53,6 +49,7 @@ namespace ConsoleApp
             {
                 position = value;
                 onPositionChanged();
+               // logger.Info($"Vehicle Location : {position.Location}");
             }
         }
 
@@ -64,7 +61,7 @@ namespace ConsoleApp
                 if (route == value)
                     return;
                 route = value;
-                Position = new VehiclePosition(route.Path.StartPoint);
+                Position = new VehiclePosition(route.Path.GetCoordinateN(0));
                 onRouteChanged();
             }
         }

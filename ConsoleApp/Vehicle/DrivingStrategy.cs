@@ -19,7 +19,7 @@ namespace ConsoleApp
                     Dispose();
                 CalculateLocation((VehicleManager)o); 
             
-            }, vehicle, 0, Timeout.Infinite);      
+            }, vehicle, Timeout.Infinite, Timeout.Infinite);      
         }
 
         public bool IsRun {
@@ -27,8 +27,8 @@ namespace ConsoleApp
             private set 
             {
                 isRun = value;
-
-                timer.Change(0, isRun ? 100 : Timeout.Infinite) ;
+                
+                timer.Change(0, isRun ? 1000 : Timeout.Infinite) ;
             } 
         }
 

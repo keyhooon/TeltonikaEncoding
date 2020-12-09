@@ -8,6 +8,5 @@ namespace ConsoleApp.Model
     {
         public int Id { get; set; }
         public ulong Imei { get; set; }
-        public Vehicle Vehicle { get; set; }
     }
 }

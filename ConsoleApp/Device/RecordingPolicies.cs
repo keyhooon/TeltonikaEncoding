@@ -11,7 +11,7 @@ namespace ConsoleApp
         protected abstract Func<bool> CoreCondition { get; }
         public bool  CheckCondition()
         {
-            return CoreCondition.Invoke() || InnerRecordingPolicies.CheckCondition();
+            return CoreCondition.Invoke() || (InnerRecordingPolicies?.CheckCondition()?? false);
         }
         private RecordingPolicies InnerRecordingPolicies { get; set; }
 
