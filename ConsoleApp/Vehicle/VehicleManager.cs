@@ -13,18 +13,19 @@ namespace ConsoleApp
         private Model.Route route;
         private bool isIgnitiate;
         private DrivingStrategy driving;
-        private VehiclePosition position;
+        private readonly Vehicle Vehicle;
         ILogger logger;
 
         public event EventHandler RouteChanged;
         public event EventHandler IsIgnitiateChanged;
         public event EventHandler PositionChanged;
-        public VehicleManager()
+        public VehicleManager(Vehicle vehicle)
         {
             logger = LogManager.GetCurrentClassLogger();
-
+            Vehicle = vehicle;
+            Driving = new StopDrivingStrategy(this);
+            Vehicle.Position.PositionChanged += (s, e) => onPositionChanged();
         }
-        public DeviceManager DeviceManager { get; set; }
         public bool IsIgnitiate
         {
             get => isIgnitiate;
@@ -39,18 +40,9 @@ namespace ConsoleApp
             }
         }
 
-
-
-
-        public VehiclePosition Position
+        public Position Position
         {
-            get => position; 
-            internal set
-            {
-                position = value;
-                onPositionChanged();
-               // logger.Info($"Vehicle Location : {position.Location}");
-            }
+            get => Vehicle.Position; 
         }
 
         public Model.Route Route
@@ -61,7 +53,6 @@ namespace ConsoleApp
                 if (route == value)
                     return;
                 route = value;
-                Position = new VehiclePosition(route.Path.GetCoordinateN(0));
                 onRouteChanged();
             }
         }
@@ -80,6 +71,7 @@ namespace ConsoleApp
         private void onPositionChanged()
         {
             PositionChanged?.Invoke(this, null);
+
         }
         private void onIsIgnitiatedChanged()
         {

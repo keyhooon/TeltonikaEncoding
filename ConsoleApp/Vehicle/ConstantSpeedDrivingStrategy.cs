@@ -19,13 +19,15 @@ namespace ConsoleApp
             Route = (LineString)Densifier.Densify(vehicle.Route.Path, 0.000001 * spead);
             lengthIndexedLine = new LengthIndexedLine(Route);
         }
-        protected override void CalculateLocation(VehicleManager vehicle)
+        protected override void CalculateLocation(VehicleManager vehicleManager)
         {
             if (lengthIndexedLine == null)
                 return;
-            var oldCoordinate = vehicle.Position.Location;
+            var oldCoordinate = vehicleManager.Position.Location;
             var newCoordinate = lengthIndexedLine.ExtractPoint(lengthIndexedLine.Project(oldCoordinate) + 0.000001 * Speed);
-            vehicle.Position = new Model.VehiclePosition(newCoordinate, Speed, vehicle.Position.Angle);
+            vehicleManager.Position.Location = newCoordinate;
+            vehicleManager.Position.Speed = Speed;
+            vehicleManager.Position.Angle = vehicleManager.Position.Angle;
         }
         public double Speed { get; }
     }

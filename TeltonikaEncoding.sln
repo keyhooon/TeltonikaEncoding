@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeltonikaEncoding", "TeltonikaEncoding\TeltonikaEncoding.csproj", "{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeltonikaEncoding", "TeltonikaEncoding\TeltonikaEncoding.csproj", "{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.Avl", "..\Avl\Teltonika.Avl\Teltonika.Avl.csproj", "{3C69DE22-1513-40A8-930D-2EE926957512}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{42D83BA2-559B-44C5-9B00-311EA9A2F928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.IO", "..\Io\Teltonika.IO\Teltonika.IO.csproj", "{A6F9766D-28D3-4799-B80A-885946BAD67E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teltonika.IO", "Io\Teltonika.IO\Teltonika.IO.csproj", "{893244B9-1B85-4BB8-A40B-3A2CE22AB7BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{42D83BA2-559B-44C5-9B00-311EA9A2F928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teltonika.Avl", "Avl\Teltonika.Avl\Teltonika.Avl.csproj", "{427DC373-D378-4DE4-817F-2E86EAED926C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika.Logging", "..\Logging\Teltonika.Logging\Teltonika.Logging.csproj", "{BF283E98-4C77-45BD-9967-6094F4A05C6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teltonika.Logging", "Logging\Teltonika.Logging\Teltonika.Logging.csproj", "{670EF52D-2FC5-4A7E-9DED-94BDA83DCF0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +23,22 @@ Global
 		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A10A2B3-6BF5-42AE-8D9B-03901D8124EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C69DE22-1513-40A8-930D-2EE926957512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C69DE22-1513-40A8-930D-2EE926957512}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C69DE22-1513-40A8-930D-2EE926957512}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C69DE22-1513-40A8-930D-2EE926957512}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6F9766D-28D3-4799-B80A-885946BAD67E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42D83BA2-559B-44C5-9B00-311EA9A2F928}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF283E98-4C77-45BD-9967-6094F4A05C6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893244B9-1B85-4BB8-A40B-3A2CE22AB7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893244B9-1B85-4BB8-A40B-3A2CE22AB7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893244B9-1B85-4BB8-A40B-3A2CE22AB7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893244B9-1B85-4BB8-A40B-3A2CE22AB7BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427DC373-D378-4DE4-817F-2E86EAED926C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427DC373-D378-4DE4-817F-2E86EAED926C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427DC373-D378-4DE4-817F-2E86EAED926C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427DC373-D378-4DE4-817F-2E86EAED926C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670EF52D-2FC5-4A7E-9DED-94BDA83DCF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670EF52D-2FC5-4A7E-9DED-94BDA83DCF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670EF52D-2FC5-4A7E-9DED-94BDA83DCF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670EF52D-2FC5-4A7E-9DED-94BDA83DCF0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

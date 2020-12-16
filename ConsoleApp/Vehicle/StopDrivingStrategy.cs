@@ -12,9 +12,10 @@ namespace ConsoleApp
 
         }
 
-        protected override void CalculateLocation(VehicleManager vehicle)
+        protected override void CalculateLocation(VehicleManager vehicleManager)
         {
-            vehicle.Position = new Model.VehiclePosition(vehicle.Position.Location, 0, vehicle.Position.Angle);
+            vehicleManager.Position.Location = vehicleManager.Position.Location;
+            vehicleManager.Position.Speed = 0;
         }
     }
 }

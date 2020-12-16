@@ -20,6 +20,7 @@ namespace ConsoleApp.Route
             MultiPoint locations = new MultiPoint(new[] { new Point(8.681495, 49.41461), new Point(8.686507, 49.41943), new Point(8.687872, 49.420318) });
 
             DefaultRoute = directionService.GetRoute(locations);
+            RegisteredRoutes.Add("", DefaultRoute);
         }
 
         public void RegisterRoute(string name, Model.Route route)
